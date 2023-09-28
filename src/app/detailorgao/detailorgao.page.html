@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-row>
+            <ion-thumbnail class="tumb">
+                <img class="text-center" [src]="getImagem()">
+            </ion-thumbnail>
+            <ion-title class="text-center font-bold">{{object.title}}</ion-title>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="padding-md">
+        <h3 class="backspace-sm">O que é</h3>
+        <p class="backspace-md"> {{object.oquee}}</p>
+        <br>
+        <br>
+        <div class="hr"> </div>
+        <br>
+        <h3 class="backspace-sm" >Função</h3>
+        <p class="backspace-md"> {{object.descricao}}</p>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-button (click)="onClick()" expand="full">
+        <ion-label stacked>Buscar Plantas Medicinais</ion-label>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+    </ion-button>
+</ion-footer>
+  

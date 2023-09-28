@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="bkg">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title class="text-center font-bold">Filtre como desejar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content padding>
+    <ion-item>
+      <ion-label>Orgão</ion-label>
+      <ion-select (ionChange)="onSelectOrgao($event)" placeholder="selecione" [(ngModel)]="object.orgao">
+        <ion-select-option [value]="null" ></ion-select-option>
+        <ion-select-option *ngFor="let item of orgaos" [value]="item" >{{item.title}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Planta Medicinal</ion-label>
+        <ion-select [disabled]="! plantaSelectEnable()" [placeholder]="msgSelectPlanta()" [(ngModel)]="object.planta">
+          <ion-select-option [value]="null" ></ion-select-option>
+          <ion-select-option *ngFor="let item of plantas" [value]="item" >{{item.title}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-content>
+
+
+<ion-footer>
+  <ion-button (click)="onClick()" expand="full">
+      <ion-label>Filtrar</ion-label> 
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </ion-button>
+</ion-footer>
+
+
+
+
+
+ 

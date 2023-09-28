@@ -1,0 +1,7 @@
+{
+  "name": "To Dodoi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

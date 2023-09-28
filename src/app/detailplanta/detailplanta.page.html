@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title class="text-center font-bold">{{getTitle()}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="backspace-sm">
+      <img class="text-center full-width" [src]="getImagem()" >
+  </div>
+    <div class="padding-md">
+        <h3 class="backspace-sm">Descrição</h3>
+        <p class="backspace-md"> {{object.descricao}}</p>
+    </div>
+</ion-content>
+  
